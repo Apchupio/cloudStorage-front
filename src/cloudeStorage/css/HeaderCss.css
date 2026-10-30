@@ -1,0 +1,109 @@
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 55px;
+    z-index: 1000;
+    background: #111;              /* тёмный фон */
+    color: #f5f5f5;                /* светлый текст */
+    border-bottom: 1px solid #333;
+}
+
+/* Внутренний контейнер для выравнивания */
+.app-header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Заголовок */
+.app-header__title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Контейнер кнопок справа */
+.app-header__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Базовый стиль кнопок */
+.btn {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+
+    padding: 8px 14px;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+
+/* Кнопка "Добавить фразу" — более заметная */
+.btn-primary {
+    background: #2d2d2d;
+    color: #ffffff;
+    box-shadow: 0 0 0 1px #444;
+}
+
+.btn-primary:hover {
+    background: #3a3a3a;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Кнопки переключателей — серые */
+.btn-toggle {
+    background: #1c1c1c;
+    color: #e0e0e0;
+    box-shadow: 0 0 0 1px #3a3a3a;
+}
+
+/* Чтобы текст не «прыгали» при смене надписи, зададим min-width */
+.btn-toggle__label {
+    display: inline-block;
+    min-width: 130px; /* подбери под свои надписи */
+    text-align: center;
+}
+
+.btn-toggle:hover {
+    background: #262626;
+    transform: translateY(-1px);
+}
+
+.btn-toggle:active {
+    transform: translateY(0);
+}
+
+/* Адаптив под маленькие экраны */
+@media (max-width: 600px) {
+    .app-header__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .app-header__buttons {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .btn-toggle__label {
+        min-width: 0;
+    }
+}

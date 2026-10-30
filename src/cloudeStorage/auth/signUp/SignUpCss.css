@@ -1,0 +1,44 @@
+/* SignUp.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Занять всю высоту экрана */
+    margin: 0; /* Убрать отступы */
+    background-color: #f0f0f0; /* Цвет фона */
+}
+
+.registrationWindow {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрирование элементов по горизонтали */
+    background-color: #fff; /* Цвет фона окна регистрации */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для окна */
+}
+
+label {
+    margin-bottom: 5px; /* Отступ снизу для меток */
+}
+
+input {
+    width: 100%; /* Поля ввода занимают всю ширину контейнера */
+    padding: 10px; /* Внутренние отступы для полей ввода */
+    margin-bottom: 15px; /* Отступ снизу между полями ввода */
+    border: 1px solid #ccc; /* Граница поля ввода */
+    border-radius: 4px; /* Скругление углов полей ввода */
+}
+
+button {
+    padding: 10px 20px; /* Внутренние отступы для кнопки */
+    border: none; /* Убрать границу у кнопки */
+    border-radius: 4px; /* Скругление углов кнопки */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    cursor: pointer; /* Указатель при наведении на кнопку */
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет фона кнопки при наведении */
+}
